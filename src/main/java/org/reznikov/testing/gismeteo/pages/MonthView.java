@@ -37,23 +37,23 @@ public class MonthView extends CityPage {
     }
 
 
-    public ThreeDaysView getForecastOnDateAsThreeDaysViewTop(LocalDate date) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath(MONTH_TILE.replace(
-                        "{0}", String.valueOf(date.getDayOfMonth())))))
-                .click();
-        //date.getMonth().getDisplayName(TextStyle.FULL,Locale.)
-        return new ThreeDaysView(driver);
-    }
-
-    public ThreeDaysView getForecastOnDateAsThreeDaysViewBottom(LocalDate date) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath(MONTH_TILE2.replace(
-                        "{0}", String.valueOf(date.getDayOfMonth())))))
-                .click();
-        //date.getMonth().getDisplayName(TextStyle.FULL,Locale.)
-        return new ThreeDaysView(driver);
-    }
+//    public ThreeDaysView getForecastOnDateAsThreeDaysViewTop(LocalDate date) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(
+//                By.xpath(MONTH_TILE.replace(
+//                        "{0}", String.valueOf(date.getDayOfMonth())))))
+//                .click();
+//        //date.getMonth().getDisplayName(TextStyle.FULL,Locale.)
+//        return new ThreeDaysView(driver);
+//    }
+//
+//    public ThreeDaysView getForecastOnDateAsThreeDaysViewBottom(LocalDate date) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(
+//                By.xpath(MONTH_TILE2.replace(
+//                        "{0}", String.valueOf(date.getDayOfMonth())))))
+//                .click();
+//        //date.getMonth().getDisplayName(TextStyle.FULL,Locale.)
+//        return new ThreeDaysView(driver);
+//    }
 
     public String getForecastOnDateAsString(LocalDate date) {
         return "Max temperature on " + date.format(DateTimeFormatter.ofPattern("MM/dd/yyyy"))
