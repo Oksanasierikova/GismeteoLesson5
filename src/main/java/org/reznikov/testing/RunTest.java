@@ -29,7 +29,7 @@ public class RunTest extends BaseWebDriverTest {
         GismeteoHomePage page = new GismeteoHomePage(driver);
         page.searchForCity("Харьков");
         MonthView monthView = new CityPage(driver).switchToMonthView();
-        monthView.getForecastOnDateAsThreeDaysViewTop(LocalDate.now());
+        monthView.getForecastForDayInMonthView(LocalDate.of(2017,01,27));
         monthView.getDate();
     }
 
@@ -39,8 +39,7 @@ public class RunTest extends BaseWebDriverTest {
         page.searchForCity("Харьков");
         MonthView monthView = new CityPage(driver).switchToMonthView();
         //monthView.getForecastOnDateAsString(LocalDate.now());
-        monthView.getForecastOnDateAsThreeDaysViewBottom(LocalDate.of(2017, 02, 01));
+        monthView.getForecastForDayInMonthView(LocalDate.of(2017, 02, 01));
         monthView.getDate();
     }
-
 }

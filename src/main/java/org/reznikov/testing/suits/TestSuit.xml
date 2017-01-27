@@ -7,7 +7,7 @@
             </methods>
         </classes>
     </test>
-    <test name="test2" enabled="true">
+    <test name="test2" enabled="false">
         <classes>
             <class name="org.reznikov.testing.RunTest" />
             <methods>
