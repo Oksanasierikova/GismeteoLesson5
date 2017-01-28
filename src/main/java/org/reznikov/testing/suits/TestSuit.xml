@@ -1,7 +1,12 @@
-<suite name="Suite1" verbose="1"  parallel="tests" thread-count="5" >
+<suite name="Suite1" verbose="1" parallel="tests" thread-count="5">
     <test name="test1" enabled="true">
+        <groups>
+            <include>"smoke"</include>
+            <exclude>"regression"</exclude><!---->
+        </groups>
+        <groups>"regression"</groups>
         <classes>
-            <class name="org.reznikov.testing.RunTest" />
+            <class name="org.reznikov.testing.RunTest"/>
             <methods>
                 <include name="testGoTopCalendar"></include>
             </methods>
@@ -9,7 +14,7 @@
     </test>
     <test name="test2" enabled="false">
         <classes>
-            <class name="org.reznikov.testing.RunTest" />
+            <class name="org.reznikov.testing.RunTest"/>
             <methods>
                 <include name="testGoBottomCalendar"></include>
             </methods>
