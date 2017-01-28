@@ -1,17 +1,19 @@
 package org.reznikov.testing;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.reznikov.testing.gismeteo.pages.CityPage;
 import org.reznikov.testing.gismeteo.pages.GismeteoHomePage;
 import org.reznikov.testing.gismeteo.pages.MonthView;
 import org.reznikov.testing.gismeteo.pages.TwoWeeksView;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.time.LocalDate;
 
 public class RunTest extends BaseWebDriverTest {
-//    @Test
+    //    @Test
 //    public void testGoToTwoWeeksView() {
 //        GismeteoHomePage page = new GismeteoHomePage(driver);
 //        page.searchForCity("Харьков");
@@ -23,13 +25,12 @@ public class RunTest extends BaseWebDriverTest {
 //        twoWeeks.getDayTemp();
 //        twoWeeks.getNightTemp();
 //    }
-
-    @Test
+    @Test(enabled = true)
     public void testGoTopCalendar() {
         GismeteoHomePage page = new GismeteoHomePage(driver);
         page.searchForCity("Харьков");
         MonthView monthView = new CityPage(driver).switchToMonthView();
-        monthView.getForecastForDayInMonthView(LocalDate.of(2017,01,27));
+        monthView.getForecastForDayInMonthView(LocalDate.now());
         monthView.getDate();
     }
 
@@ -39,7 +40,7 @@ public class RunTest extends BaseWebDriverTest {
         page.searchForCity("Харьков");
         MonthView monthView = new CityPage(driver).switchToMonthView();
         //monthView.getForecastOnDateAsString(LocalDate.now());
-        monthView.getForecastForDayInMonthView(LocalDate.of(2017, 02, 01));
+        monthView.getForecastForDayInMonthView(LocalDate.now().plusDays(5));
         monthView.getDate();
     }
 }

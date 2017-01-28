@@ -21,7 +21,7 @@ public class MonthView extends CityPage {
 
     public void getForecastForDayInMonthView(LocalDate date) {
         LocalDate firstDayInList = LocalDate.now();
-        if (ChronoUnit.DAYS.between(firstDayInList, date) < 5) {
+        if (firstDayInList.getMonthValue()== date.getMonthValue()) {
             wait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.xpath(MONTH_TILE.replace(
                             "{0}", String.valueOf(date.getDayOfMonth())))))
