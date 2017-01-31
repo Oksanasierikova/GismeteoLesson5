@@ -1,10 +1,10 @@
 <suite name="Suite1" verbose="1" parallel="tests" thread-count="5">
     <test name="test1" enabled="true">
-<!--        <groups>
-            &lt;!&ndash;<include>"smoke"</include>&ndash;&gt;
-            &lt;!&ndash;<exclude>"regression"</exclude>&ndash;&gt;
-        </groups>-->
-       <!-- <groups>"regression"</groups>-->
+        <!--        <groups>
+                    &lt;!&ndash;<include>"smoke"</include>&ndash;&gt;
+                    &lt;!&ndash;<exclude>"regression"</exclude>&ndash;&gt;
+                </groups>-->
+        <!-- <groups>"regression"</groups>-->
         <classes>
             <class name="org.reznikov.testing.HW6"/>
             <methods>

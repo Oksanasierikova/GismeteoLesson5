@@ -1,6 +1,5 @@
 package org.reznikov.testing;
 
-import org.reznikov.testing.BaseWebDriverTest;
 import org.reznikov.testing.jetbrains.pages.CreateAccount;
 import org.reznikov.testing.jetbrains.pages.ForgotPassword;
 import org.reznikov.testing.jetbrains.pages.JetBrainsMainPage;
@@ -32,7 +31,7 @@ public class HW6 extends BaseWebDriverTest {
     public void testJetBrainsRegisterAccount(String firstname, String lastname, String email) {
         LoginPage page = new JetBrainsMainPage(driver).navigate().getLoginPage();
         page.createAccount(firstname, lastname, email);
-        CreateAccount createAccount = new  CreateAccount(driver);
+        CreateAccount createAccount = new CreateAccount(driver);
         softAssert.assertTrue(createAccount.getInfoMessageForRegisterAccount().contains("Thank you for registering your JetBrains Account!"));
         softAssert.assertAll();
     }

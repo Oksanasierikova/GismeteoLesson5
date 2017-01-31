@@ -43,7 +43,7 @@ public class LoginPage extends JetBrainsMainPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(LNAME_ID))).sendKeys(lastname);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(EMAIL))).sendKeys(email);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(SUBMIT_BUTTON2))).click();
-        return  new CreateAccount(driver);
+        return new CreateAccount(driver);
     }
 
 

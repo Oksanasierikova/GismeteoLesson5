@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class JetBrainsMainPage {
     protected WebDriver driver;
     protected WebDriverWait wait;
-    private static String LOGIN_SELECTOR ="//a[@title='Account']";
+    private static String LOGIN_SELECTOR = "//a[@title='Account']";
 
     public JetBrainsMainPage(WebDriver driver) {
         this.driver = driver;
@@ -20,7 +20,7 @@ public class JetBrainsMainPage {
         return this;
     }
 
-    public LoginPage getLoginPage(){
+    public LoginPage getLoginPage() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOGIN_SELECTOR))).click();
         return new LoginPage(driver);
     }
