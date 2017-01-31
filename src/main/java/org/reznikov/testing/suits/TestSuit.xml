@@ -1,22 +1,22 @@
 <suite name="Suite1" verbose="1" parallel="tests" thread-count="5">
     <test name="test1" enabled="true">
-        <groups>
-            <include>"smoke"</include>
-            <exclude>"regression"</exclude><!---->
-        </groups>
-        <groups>"regression"</groups>
+<!--        <groups>
+            &lt;!&ndash;<include>"smoke"</include>&ndash;&gt;
+            &lt;!&ndash;<exclude>"regression"</exclude>&ndash;&gt;
+        </groups>-->
+       <!-- <groups>"regression"</groups>-->
         <classes>
-            <class name="org.reznikov.testing.RunTest"/>
+            <class name="org.reznikov.testing.HW6"/>
             <methods>
-                <include name="testGoTopCalendar"></include>
+                <include name="testJetBrainsForgotPassw"></include>
             </methods>
         </classes>
     </test>
     <test name="test2" enabled="false">
         <classes>
-            <class name="org.reznikov.testing.RunTest"/>
+            <class name="org.reznikov.testing.HW6"/>
             <methods>
-                <include name="testGoBottomCalendar"></include>
+                <include name="testJetBrainsRegisterAccount"></include>
             </methods>
         </classes>
     </test>
