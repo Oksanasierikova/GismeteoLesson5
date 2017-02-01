@@ -1,8 +1,9 @@
-package org.reznikov.testing;
+package org.reznikov.testing.gismeteo.pages.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.reznikov.testing.BaseWebDriverTest;
 import org.reznikov.testing.gismeteo.pages.CityPage;
 import org.reznikov.testing.gismeteo.pages.GismeteoHomePage;
 import org.reznikov.testing.gismeteo.pages.MonthView;

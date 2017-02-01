@@ -1,5 +1,6 @@
-package org.reznikov.testing;
+package org.reznikov.testing.jetbrains.pages.tests;
 
+import org.reznikov.testing.BaseWebDriverTest;
 import org.reznikov.testing.jetbrains.pages.CreateAccount;
 import org.reznikov.testing.jetbrains.pages.ForgotPassword;
 import org.reznikov.testing.jetbrains.pages.JetBrainsMainPage;
